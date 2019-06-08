@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     {% block title %}
-    <title>运维内部网址导航</title>
+    <title>导航</title>
     {% endblock %}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,7 +44,7 @@
 <!-- header部分 -->
 <div class="header container-fluid">
     <div class="wrapper">
-        <div class="logo fl"><a href="{% url 'index' %}">运维内部网址导航</a></div>
+        <div class="logo fl"><a href="{% url 'index' %}">导航</a></div>
         <p class="desc hidden-xs hidden-sm hidden-md fr">今天是 {{ today }} {{ weekday }}   
             <a class="dkbutton"  href="{% url 'commit' %}" target="_blank">提交链接</a>
             <!-- <a class="dkbutton"  href="{% url 'commit' %}" target="_blank">统一登录</a> -->
@@ -63,11 +63,7 @@
 
 
 <!-- footer部分 -->
-<div class="footer">
-    <p class="info">一群热爱代码,热爱生活的小伙伴</p>
-    <!-- <img width="120" height="120" src="{% static 'app/image/wechat.jpg' %}" alt=""> -->
 
-</div>
 <!-- 返回顶部 -->
 <div class="back_to_top hide" style="display: none;">
     <a href="javascript:;" class="iconfont icon-up"></a>
@@ -86,10 +82,12 @@
       <h3 class="title" id="<%=data[i].gid%>"><%=data[i].title%></h3>
       <ul class="clearfix">
          <%for (var j=0;j<data[i].list.length;j++) {%>
+		 <a href="<%=data[i].list[j].href%>" target="_blank" class="<%=data[i].list[j].link%>">
          <li class="content_item fl">
-            <a href="<%=data[i].list[j].href%>" target="_blank" class="<%=data[i].list[j].link%>"><%=data[i].list[j].title%></a><br />
+            <%=data[i].list[j].title%><br />
             <span class="text"><%=data[i].list[j].desc%></span>
         </li>
+		</a>
         <%}%>
     </ul>
 </div>
