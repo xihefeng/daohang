@@ -1,5 +1,5 @@
 # 基础镜像
-FROM python:3.7-alpine
+FROM python:3.6-alpine
 
 # 维护者信息
 MAINTAINER zhuima <zhuima314@gmail.com>
