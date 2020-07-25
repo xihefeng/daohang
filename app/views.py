@@ -5,13 +5,15 @@ import datetime
 import json
 
 from django.contrib import messages
-from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
+
 # from django.core.urlresolvers import reverse
 from django.urls import reverse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render
+from django.views import generic
 
 from app.forms import CommitForm
-from app.models import UrlGroup
+from app.models import UrlGroup, UrlInfor
 
 
 def index(request):
@@ -86,7 +88,7 @@ def commit(request):
             urlinfor = form.save(commit=False)
             urlinfor.save()
             print(urlinfor)
-            messages.success(request, "提交成功! ")
+            messages.success(request, "提交成功! 审核期1个工作日。")
             return HttpResponseRedirect(reverse("commit"))
     else:
         form = CommitForm()

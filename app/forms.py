@@ -2,9 +2,9 @@
 
 from django import forms
 from django.conf import settings
-from django.utils.http import is_safe_url
 
 from app.models import UrlInfor
+from django.utils.http import is_safe_url
 
 
 class CommitForm(forms.ModelForm):

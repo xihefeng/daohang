@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
 from app import views as app_views
 
 admin.site.site_title = "daohang"
 admin.site.site_header = "运维内部导航平台"
+
 
 urlpatterns = [
     url(r"^signin/", admin.site.urls, name="login"),

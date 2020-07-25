@@ -1,9 +1,8 @@
 # coding: utf8
 
 from django.contrib import admin
-
 from .models import UrlGroup, UrlInfor
-
+from django.utils.html import format_html
 
 # Register your models here.
 
@@ -26,7 +25,9 @@ class UrlGroupModelAdmin(admin.ModelAdmin):
         model = UrlGroup
 
 
+
 class UrlInforModelAdmin(admin.ModelAdmin):
+
     # 显示在管理页面的字段
     list_display = (
         "url_name",
@@ -50,6 +51,7 @@ class UrlInforModelAdmin(admin.ModelAdmin):
     class Meta:
         model = UrlInfor
 
+ 
 
 admin.site.register(UrlGroup, UrlGroupModelAdmin)
 admin.site.register(UrlInfor, UrlInforModelAdmin)

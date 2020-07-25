@@ -19,6 +19,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
@@ -31,6 +32,7 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = []
+
 
 # Application definition
 
@@ -77,6 +79,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "daohang.wsgi.application"
 
+
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
@@ -87,6 +90,7 @@ DATABASES = {
     }
 }
 
+
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
@@ -94,10 +98,11 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
-    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator", },
-    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator", },
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator", },
+    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",},
+    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",},
+    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
 ]
+
 
 # 首页图标
 SIMPLEUI_HOME_ICON = "layui-icon-rate"
@@ -105,7 +110,9 @@ SIMPLEUI_HOME_ICON = "layui-icon-rate"
 # header
 SIMPLEUI_SITE_HEADER = "运维导航平台"
 
+
 SIMPLEUI_HOME_INFO = False
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
@@ -115,6 +122,7 @@ SIMPLEUI_HOME_INFO = False
 # 支持中文
 LANGUAGE_CODE = "zh-Hans"
 
+
 # 时区修改
 TIME_ZONE = "Asia/Shanghai"
 
@@ -123,6 +131,7 @@ USE_I18N = True
 USE_L10N = False
 
 USE_TZ = True
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
@@ -136,16 +145,19 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
+
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 )
+
 
 SIMPLEUI_ICON = {
     "导航分组": "fas fa-american-sign-language-interpreting",
     # fas fa-american-sign-language-interpreting
     "导航详情": "far fa-hand-point-right",
 }
+
 
 MESSAGE_TAGS = {
     message_constants.SUCCESS: "alert alert-success",

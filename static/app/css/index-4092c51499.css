@@ -136,7 +136,8 @@
 }
 
 .container .content .content_items {
-    padding-top: 20px
+    padding-top: 20px;
+    cursor: pointer;
 }
 
 .container .content .content_items .title {
