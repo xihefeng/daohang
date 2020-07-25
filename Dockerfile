@@ -12,4 +12,4 @@ ADD . /usr/local/web/
 RUN cd /usr/local/web/ && python -m pip install --no-cache-dir -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
 
 EXPOSE 8080
-CMD python manage.py runserver  0.0.0.0:8080
+CMD python manage.py runserver --noreload   0.0.0.0:8080
