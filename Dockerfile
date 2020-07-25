@@ -13,4 +13,4 @@ RUN apk update && apk  add  --no-cache tzdata \
 RUN cd /usr/local/web/ && pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 8080
-CMD python manage.py runserver  0.0.0.0:8080
+CMD python manage.py runserver  --noreload  0.0.0.0:8080
